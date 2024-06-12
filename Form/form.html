@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+
+</navbar>
+<body>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Are you sure you want to save the form?</p>
+            <button onclick="saveForm()">YES</button>
+            <button onclick="closePopup()">NO</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="container-navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-formulary">Form</div>
+    <form class="formularyone">
+        <input type="text" placeholder="Your full name" name="name" />
+        <input type="tel" placeholder="Your telefone" name="tel" />
+        <input type="text" placeholder="Your city" name="city" />
+        <input type="text" placeholder="Your social ID" name="id" />
+        
+        <div class="sexo-container">
+            <select id="edit-sexo" name="field_sexo" class="form-sexo" onchange="toggleOtherTextInput()">
+                <option value="_none">- None -</option>
+                <option value="fem">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" id="other-text" class="other-text" placeholder="Your sex" name="other-text" />
+        </div>
+        
+    </form>
+    <div class="button-final">
+        <a class="back-button" href="../index.html">Back</a>
+        <a class="save-button" href="javascript:void(0);" onclick="openPopup()">Save</a>
+    </div>  
+
+    <footer>
+        <div class="footer">&copy; 2024 Lanna</div>
+    </footer>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
