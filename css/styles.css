@@ -372,7 +372,6 @@ footer {
     background-color: #9696d3;
 }
 
-
 .banner:hover::after {
     opacity: 1;
 }
@@ -382,7 +381,13 @@ footer {
     overflow: hidden; 
     cursor: none;
 }
-
+.navbar ul li.login-button {
+    margin-left: auto; 
+    border: 2px solid black;
+    background:black;
+    border-radius:px;
+    margin-top:7px;
+}
 .paw {
     position: absolute;
     width: 32px;
@@ -400,7 +405,6 @@ footer {
         transform: scale(0.6);
     }
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {
