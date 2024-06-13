@@ -91,5 +91,38 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+let lastPawTime = 0; 
 
-c
+document.addEventListener('mousemove', function(e) {
+    const now = Date.now();
+    if (now - lastPawTime < 100) return; 
+    lastPawTime = now;
+
+    const banner = document.querySelector('.banner');
+    const bannerRect = banner.getBoundingClientRect();
+
+    if (e.clientX >= bannerRect.left && e.clientX <= bannerRect.right && e.clientY >= bannerRect.top && e.clientY <= bannerRect.bottom) {
+        const pawImage = './img/paw.png';
+
+        const paw = document.createElement('div');
+        paw.classList.add('paw');
+        paw.style.left = `${e.clientX - bannerRect.left}px`;
+        paw.style.top = `${e.clientY - bannerRect.top}px`;
+        paw.style.backgroundImage = `url(${pawImage})`;
+
+       
+        const hueRotateValue = Math.floor(Math.random() * 360);
+        paw.style.filter = `hue-rotate(${hueRotateValue}deg)`;
+
+        banner.appendChild(paw);
+
+        setTimeout(() => {
+            paw.style.opacity = '0';
+            paw.style.transform = 'scale(0.5)';
+        }, 100);
+
+        setTimeout(() => {
+            paw.remove();
+        }, 600); 
+    }
+});

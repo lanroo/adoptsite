@@ -359,7 +359,10 @@ footer {
     color: #fff;
 }
 
-/* Estilos existentes */
+.banner {
+    position: relative;
+    overflow: hidden; 
+}
 
 .banner img {
     width: 100%;
@@ -368,6 +371,36 @@ footer {
     margin: 0 auto;
     background-color: #9696d3;
 }
+
+
+.banner:hover::after {
+    opacity: 1;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden; 
+    cursor: none;
+}
+
+.paw {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; 
+    opacity: 0.8;
+    transition: opacity 0.5s, transform 0.5s;
+    filter: hue-rotate(0deg); 
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
