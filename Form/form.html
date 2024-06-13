@@ -5,20 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
-
-</navbar>
 <body>
-    
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <p>Are you sure you want to save the form?</p>
-            <button onclick="saveForm()">YES</button>
-            <button onclick="closePopup()">NO</button>
-        </div>
-    </div>
-
     <nav class="navbar">
         <div class="container-navbar">
             <ul>
@@ -28,28 +17,29 @@
             </ul>
         </div>
     </nav>
-    <div class="container-formulary">Form</div>
-    <form class="formularyone">
+    <div class="container-formulary">
+        <span class="underline-rm">Fo<span class="underline-only">rm</span>
+    </div>
+    <form class="formularyone" id="contactForm">
         <input type="text" placeholder="Your full name" name="name" />
         <input type="tel" placeholder="Your telefone" name="tel" />
         <input type="text" placeholder="Your city" name="city" />
         <input type="text" placeholder="Your social ID" name="id" />
         
         <div class="sexo-container">
-            <select id="edit-sexo" name="field_sexo" class="form-sexo" onchange="toggleOtherTextInput()">
+            <select id="edit-sexo" name="field_sexo" class="form-sexo">
                 <option value="_none">- None -</option>
                 <option value="fem">Female</option>
                 <option value="male">Male</option>
                 <option value="other">Other</option>
             </select>
-            <input type="text" id="other-text" class="other-text" placeholder="Your sex" name="other-text" />
+            <input type="text" id="other-text" class="other-text" placeholder="Your sex" name="other-text" style="display:none;" />
         </div>
-        
     </form>
     <div class="button-final">
         <a class="back-button" href="../index.html">Back</a>
-        <a class="save-button" href="javascript:void(0);" onclick="openPopup()">Save</a>
-    </div>  
+        <a class="save-button" href="javascript:void(0);" id="saveButton">Save</a>
+    </div>   
 
     <footer>
         <div class="footer">&copy; 2024 Lanna</div>
